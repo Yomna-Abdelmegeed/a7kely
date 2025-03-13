@@ -1,3 +1,4 @@
+import 'package:a7kely/Core/Home/Screens/details_screen.dart';
 import 'package:a7kely/color/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -9,7 +10,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColor.offWhite,
       appBar: AppBar(
+        backgroundColor: AppColor.offWhite,
         leading: Image.asset('assets/Images/logo.png'),
         title: Image.asset(
           'assets/Images/name.png',
@@ -59,7 +62,10 @@ class HomeScreen extends StatelessWidget {
                   alignment: Alignment.topRight,
                   children: [
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => DetailsScreen()));
+                      },
                       child: Container(
                         height: 220,
                         width: double.infinity,
